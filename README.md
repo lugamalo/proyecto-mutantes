@@ -87,3 +87,8 @@ Se implementaron funciones lambda en lenguaje de programación Java las cuales e
  
  Prueba de Invocacion cliente Postman
  ![image](https://user-images.githubusercontent.com/56520213/109397047-b21be480-7902-11eb-81ae-d4339297373c.png)
+ 
+ # **Code Coverage > 80# **
+ 
+ ![image](https://user-images.githubusercontent.com/56520213/109402030-75f77c80-7920-11eb-8976-a722d3d82bde.png)
+
