@@ -55,7 +55,7 @@ La solución del problema esta planteada para que se resuelva usando Arquitectur
 
 # Servicios empleados de AWS
 ### **API Gateway** --> Publica las 2 APIs REST de los niveles 2 y 3 del desafio
-### **Lambda** --> Funciones lambda que ejecutan el código Java para invocar la funcionalidad de deteccion de mutantes y estadisticas de verificación ADN.
+### **Lambda** --> Funciones lambda que ejecutan el código Java para invocar la funcionalidad de detección de mutantes y estadísticas de verificación ADN.
 ### **DynamoBD** --> Base de datos NoSQL que almacena los ADNs verificados a traves del API
 
 # **Nivel 1:** 
@@ -72,10 +72,17 @@ Se implementaron funciones lambda en lenguaje de programación Java las cuales e
  
  **Mensajes de Validación** &nbsp;
  * HTTP 200-OK --> Es Mutante &nbsp;
+ ![image](https://user-images.githubusercontent.com/56520213/109658924-22aa4780-7b35-11eb-8fa0-b08059dae8fd.png)
+
  * 403-Forbidden --> Es Humano &nbsp;
+ ![image](https://user-images.githubusercontent.com/56520213/109659121-5b4a2100-7b35-11eb-844d-44aa18ab14fa.png)
+
  * 400-Bad Request --> Cadena de secuencias invalida (nula, longitud 0 no es matriz cuadradada) &nbsp;
  
  **Prueba de Invocacion API  cliente Postman**
+Valida que las letras que componen la base Nitrogenada ADN no cuente con letras invalidas
+![image](https://user-images.githubusercontent.com/56520213/109657828-efb38400-7b33-11eb-8264-4e5902297ce9.png)
+Valida la matriz de entrada cuente con elementos 
  ![image](https://user-images.githubusercontent.com/56520213/109397101-06bf5f80-7903-11eb-8add-d58f9b5bb75a.png)
  ![image](https://user-images.githubusercontent.com/56520213/109397875-19d42e80-7907-11eb-95a6-64d3408efa27.png)
 
@@ -90,7 +97,7 @@ Se implementaron funciones lambda en lenguaje de programación Java las cuales e
  
  # **Code Coverage > 80#**
  
- Para realizar la cobertura de pruebas en el código se uso la libreria JaCoCo el cubrimiento de codigo, la cual genero el siguiente reporte HTML la cual describe los diferentes escenarios que se evaluaron en las pruebas realizadas al algoritmo de detección de mutantes 
+ Para realizar la cobertura de pruebas en el código se uso la libreria JaCoCo, la cual generó el siguiente reporte HTML el cual describe los diferentes escenarios que se evaluaron en las pruebas realizadas al algoritmo de detección de mutantes 
 
  ![image](https://user-images.githubusercontent.com/56520213/109402030-75f77c80-7920-11eb-8976-a722d3d82bde.png)
  
