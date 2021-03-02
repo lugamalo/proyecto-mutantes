@@ -82,7 +82,8 @@ Se implementaron funciones lambda en lenguaje de programación Java las cuales e
  **Prueba de Invocacion API  cliente Postman**
 Valida que las letras que componen la base Nitrogenada ADN no cuente con letras invalidas
 ![image](https://user-images.githubusercontent.com/56520213/109657828-efb38400-7b33-11eb-8264-4e5902297ce9.png)
-Valida la matriz de entrada cuente con elementos 
+Valida la matriz de entrada cuente con elementos o que no venga nula
+![image](https://user-images.githubusercontent.com/56520213/109659677-eaefcf80-7b35-11eb-8f33-93cf9073a0f4.png)
  ![image](https://user-images.githubusercontent.com/56520213/109397101-06bf5f80-7903-11eb-8add-d58f9b5bb75a.png)
  ![image](https://user-images.githubusercontent.com/56520213/109397875-19d42e80-7907-11eb-95a6-64d3408efa27.png)
 
