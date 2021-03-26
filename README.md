@@ -95,6 +95,12 @@ Valida la matriz de entrada cuente con elementos o que no venga nula
  Prueba de Invocacion cliente Postman
  ![image](https://user-images.githubusercontent.com/56520213/109397047-b21be480-7902-11eb-81ae-d4339297373c.png)
  
+ # **Validacion Status Code HTTP APIs REST**
+ Desde la funcion lambda se envia el resultado del algoritmo como mensaje de tipo String y dentro de API Gateway de AWS se sobrescribe el codigo de estatus HTTP para entregar el código definido para cada respuesta de cada problema. La definicion se baso en la siguiente documentacion de AWS https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-override-request-response-parameters.html
+ 
+ ![image](https://user-images.githubusercontent.com/56520213/112564959-2afb4880-8daa-11eb-93fd-b14f6f0320d2.png)
+
+ 
  # **Code Coverage > 80#**
  
  Para realizar la cobertura de pruebas en el código se uso la libreria JaCoCo, la cual generó el siguiente reporte HTML el cual describe los diferentes escenarios que se evaluaron en las pruebas realizadas al algoritmo de detección de mutantes 
