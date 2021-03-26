@@ -95,11 +95,22 @@ Valida la matriz de entrada cuente con elementos o que no venga nula
  Prueba de Invocacion cliente Postman
  ![image](https://user-images.githubusercontent.com/56520213/109397047-b21be480-7902-11eb-81ae-d4339297373c.png)
  
- # **Validacion Status Code HTTP APIs REST**
+ # **Validacion Status Code HTTP de las APIs REST con AWS API Gateway**
  Desde la funcion lambda se envia el resultado del algoritmo como mensaje de tipo String y dentro de API Gateway de AWS se sobrescribe el codigo de estatus HTTP para entregar el código definido para cada respuesta de cada problema. La definicion se baso en la siguiente documentacion de AWS https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-override-request-response-parameters.html
  
+ La siguiente imagen muesta la configuración realizada en la opcion Method Execution del metodo de respuesta HTTP 200
+ 
  ![image](https://user-images.githubusercontent.com/56520213/112564959-2afb4880-8daa-11eb-93fd-b14f6f0320d2.png)
-
+**Snippet de Codigo escrito en (VTL) Velocity Template Languaje**
+#set($inputRoot = $input.path('$'))
+$input.json("$")
+#if($inputRoot.toString().contains("400-Bad Request"))
+#set($context.responseOverride.status = 400)
+#elseif($inputRoot.toString().contains("403-Forbidden"))
+#set($context.responseOverride.status = 403)
+#else
+#set($context.responseOverride.status = 200)
+#end
  
  # **Code Coverage > 80#**
  
